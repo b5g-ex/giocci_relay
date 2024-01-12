@@ -118,17 +118,29 @@ defmodule GiocciRelay.Server do
 
   def detect(binary, destination) do
     case destination do
-      :aws ->
-        Logger.info("relay to ===> #{inspect(:aws)}")
-        GenServer.call({:global, :yolo_aws}, binary, @timeout_ms)
+      #   :aws ->
+      #     Logger.info("relay to ===> #{inspect(:aws)}")
+      #     GenServer.call({:global, :yolo_aws}, binary, @timeout_ms)
 
-      :mec ->
-        Logger.info("relay to ===> #{inspect(:mec)}")
-        GenServer.call({:global, :yolo_mec}, binary, @timeout_ms)
+      #   :mec ->
+      #     Logger.info("relay to ===> #{inspect(:mec)}")
+      #     GenServer.call({:global, :yolo_mec}, binary, @timeout_ms)
 
-      :sakura ->
-        Logger.info("relay to ===> #{inspect(:sakura)}")
-        GenServer.call({:global, :yolo_sakura}, binary, @timeout_ms)
+      #   :sakura ->
+      #     Logger.info("relay to ===> #{inspect(:sakura)}")
+      #     GenServer.call({:global, :yolo_sakura}, binary, @timeout_ms)
+
+      :fukuoka_tsuyotsuyo ->
+        Logger.info("relay to ===> #{inspect(:fukuoka_tsuyotsuyo)}")
+        GenServer.call({:global, :fukuoka_tsuyotsuyo}, binary, @timeout_ms)
+
+      :fukuoka_yowayowa ->
+        Logger.info("relay to ===> #{inspect(:fukuoka_yowayowa)}")
+        GenServer.call({:global, :fukuoka_yowayowa}, binary, @timeout_ms)
+
+      :tokyo_tooine ->
+        Logger.info("relay to ===> #{inspect(:tokyo_tooine)}")
+        GenServer.call({:global, :tokyo_tooine}, binary, @timeout_ms)
 
       _ ->
         false
